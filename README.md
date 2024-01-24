@@ -12,6 +12,7 @@ Selected options in interactive mode:
 1. [Preparation](#preparation)
 2. [Eslint](#eslint)
 3. [Prettier](#prettier)
+4. [Git hooks](#git-hooks)
 
 ## Preparation
 
@@ -100,3 +101,29 @@ And then run it with
 ```bash
 npm run format
 ```
+
+## Git hooks
+
+For check linting and formatting before commit you can use [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/lint-staged/lint-staged)
+
+```bash
+npm install --save-dev husky lint-staged
+npx husky install
+npm pkg set scripts.prepare="husky install"
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+> Note: For CI environments, when install dependencies use `npm ci --ignore-scripts` to avoid prepare script execution
+
+Add the following to your `package.json` file
+
+```json
+{
+  "lint-staged": {
+    "**/*.{ts,html}": "npx eslint --fix",
+    "**/*": "npx prettier --write --ignore-unknown"
+  }
+}
+```
+
+> Note: It's important to run Prettier after ESLint
