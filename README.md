@@ -10,6 +10,7 @@ Selected options in interactive mode:
 ```
 
 1. [Preparation](#preparation)
+2. [Eslint](#eslint)
 
 ## Preparation
 
@@ -23,4 +24,18 @@ Install dependencies
 
 ```bash
 npm install
+```
+
+## Eslint
+
+Add [Angular Eslint Schematics](https://github.com/angular-eslint/angular-eslint) to project
+
+```bash
+ng add @angular-eslint/schematics
+```
+
+For execute linting on all files you can use
+
+```bash
+npm run lint
 ```
