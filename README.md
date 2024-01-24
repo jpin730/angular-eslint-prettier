@@ -1,4 +1,4 @@
-# Angular + Eslint + Prettier
+# Angular + ESLint + Prettier
 
 ## Introduction
 
