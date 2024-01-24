@@ -68,7 +68,7 @@ Add `.prettierrc` file to project root and the [basic configuration suggested by
 }
 ```
 
-But, my personal preference is to use double quotes, so I change the configuration to
+But, my personal preference is to use 2 spaces for indentation and trailing commas in all cases, so my `.prettierrc` file is
 
 ```json
 {
