@@ -11,6 +11,7 @@ Selected options in interactive mode:
 
 1. [Preparation](#preparation)
 2. [Eslint](#eslint)
+3. [Prettier](#prettier)
 
 ## Preparation
 
@@ -38,4 +39,64 @@ For execute linting on all files you can use
 
 ```bash
 npm run lint
+```
+
+## Prettier
+
+Add [Prettier](https://prettier.io/docs/en/install) to project
+
+```bash
+npm install --save-dev --save-exact prettier
+```
+
+Add `.prettierrc` file to project root and the [basic configuration suggested by Prettier](https://prettier.io/docs/en/configuration) is
+
+```json
+{
+  "trailingComma": "es5",
+  "tabWidth": 4,
+  "semi": false,
+  "singleQuote": true
+}
+```
+
+But, my personal preference is to use double quotes, so I change the configuration to
+
+```json
+{
+  "trailingComma": "all", // changed
+  "tabWidth": 2, // changed
+  "semi": false,
+  "singleQuote": true
+}
+```
+
+Install [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to make ESLint and Prettier play nice with each other
+
+```bash
+npm install --save-dev eslint-config-prettier
+```
+
+Add eslint-config-prettier at the end of the extends array in your `.eslintrc.json` file
+
+```json
+{
+  "extends": ["...", "prettier"]
+}
+```
+
+You can add a script to your package.json to run Prettier on all files ignoring unknown ones
+
+```json
+{
+  "scripts": {
+    "format": "prettier --write --ignore-unknown ."
+  }
+}
+```
+
+And then run it with
+
+```bash
+npm run format
 ```
