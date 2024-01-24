@@ -1,5 +1,9 @@
 # Angular + Eslint + Prettier
 
+## Introduction
+
+This is a simple Angular project with Eslint and Prettier configured. The main goal is to have an Angular project with a good code style and format, and to achieve this, I use Eslint and Prettier together. I try to resume in simple steps how to configure it in a new Angular project. There are one branch for the result of each step, so you can see the changes in each one.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 Selected options in interactive mode:
@@ -9,10 +13,13 @@ Selected options in interactive mode:
 ? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
 ```
 
+## Table of contents
+
 1. [Preparation](#preparation)
 2. [Eslint](#eslint)
 3. [Prettier](#prettier)
 4. [Git hooks](#git-hooks)
+5. [Recommended VSCode extensions](#recommended-vscode-extensions)
 
 ## Preparation
 
@@ -127,3 +134,8 @@ Add the following to your `package.json` file
 ```
 
 > Note: It's important to run Prettier after ESLint
+
+## Recommended VSCode extensions
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
