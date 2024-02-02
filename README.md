@@ -120,6 +120,18 @@ npm pkg set scripts.prepare="husky install"
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
+For husky 9 or later, `npx husky install` and `npx husky add` are deprecated, so you can use the following commands
+
+```bash
+npx husky init
+```
+
+In file `.husky/pre-commit` replace the content with
+
+```bash
+npx lint-staged
+```
+
 > Note: For CI environments, when install dependencies use `npm ci --ignore-scripts` to avoid prepare script execution
 
 Add the following to your `package.json` file
