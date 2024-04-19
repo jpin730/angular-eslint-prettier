@@ -20,6 +20,12 @@ ng new --minimal --ssr=false --style=css --skip-git --skip-install angular-eslin
 
 ## Preparation
 
+Generate .nvmrc file with the Node version used in the project
+
+```bash
+node -v > .nvmrc
+```
+
 Use [Node Version Manager](https://github.com/nvm-sh/nvm) for set Node version specified in .nvmrc file
 
 ```bash
