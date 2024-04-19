@@ -4,13 +4,10 @@
 
 This is a simple Angular project with Eslint and Prettier configured. The main goal is to have an Angular project with a good code style and format, and to achieve this, I use Eslint and Prettier together. I try to resume in simple steps how to configure it in a new Angular project. There are one branch for the result of each step, so you can see the changes in each one.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
-
-Selected options in interactive mode:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5 through the following command:
 
 ```bash
-? Which stylesheet format would you like to use? CSS
-? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+ng new --minimal --ssr=false --style=css --skip-git --skip-install angular-eslint-prettier
 ```
 
 ## Table of contents
