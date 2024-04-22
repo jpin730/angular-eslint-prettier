@@ -101,7 +101,7 @@ You can add a script to your package.json to run Prettier on all files ignoring 
 ```json
 {
   "scripts": {
-    "format": "prettier --write --ignore-unknown ."
+    "format": "prettier --write --ignore-unknown --list-different ."
   }
 }
 ```
