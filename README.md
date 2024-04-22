@@ -118,12 +118,9 @@ For check linting and formatting before commit you can use [husky](https://githu
 
 ```bash
 npm install --save-dev husky lint-staged
-npx husky install
-npm pkg set scripts.prepare="husky install"
-npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
-For husky 9 or later, `npx husky install` and `npx husky add` are deprecated, so you can use the following commands
+The following init command simplifies setting up husky in a project. It creates a `pre-commit` script in `.husky/` and updates the `prepare` script in `package.json`. Modifications can be made later to suit your workflow.
 
 ```bash
 npx husky init

@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
-    "format": "prettier --write --ignore-unknown --list-different ."
+    "format": "prettier --write --ignore-unknown --list-different .",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +37,13 @@
     "@typescript-eslint/parser": "7.2.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "3.2.5",
     "typescript": "~5.4.2"
+  },
+  "lint-staged": {
+    "**/*": "npx prettier --write --ignore-unknown",
+    "**/*.{ts,html}": "npx eslint --fix"
   }
 }
